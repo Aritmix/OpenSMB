@@ -12,6 +12,7 @@ namespace Smb.Core.Messages.Message_Syntax.CREATE.Buffer_names
 
         public UInt16 StructureSize;
         public UInt16 Reserved => 0;
+
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
         public Byte[] AppInstanceId;
     }

@@ -8,7 +8,7 @@ namespace Smb.Core
     /// The SMB2 LOGOFF Response packet is sent by the server to confirm that an SMB2 LOGOFF Request (section 2.2.7) was completed successfully. This response is composed of an SMB2 header, as specified in section 2.2.1, followed by this request structure:
     /// </summary>
     [StructLayout(layoutKind: LayoutKind.Sequential)]
-    internal class LOGOFF_RESPONSE
+    internal class LOCK_RESPONSE
     {
         /// <summary>
         /// StructureSize (2 bytes): The server MUST set this field to 4, indicating the size of the response structure, not including the header.
