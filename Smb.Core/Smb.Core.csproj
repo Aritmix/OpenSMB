@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>[MS-SMB2]: 
+Server Message Block (SMB) Protocol Versions 2 and 3
+https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Header\**" />
+    <Compile Remove="Models\Package\**" />
+    <EmbeddedResource Remove="Models\Header\**" />
+    <EmbeddedResource Remove="Models\Package\**" />
+    <None Remove="Models\Header\**" />
+    <None Remove="Models\Package\**" />
+  </ItemGroup>
+
+</Project>
