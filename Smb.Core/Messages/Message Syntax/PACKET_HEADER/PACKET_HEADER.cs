@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 namespace Smb.Core.Messages.Message.Packet
 {
     [StructLayout(layoutKind:LayoutKind.Sequential)]
-    public class PacketHeader : PacketHeaderBase
+    public class PACKET_HEADER : PacketHeaderBase
     {
-        public PacketHeader()
+        public PACKET_HEADER()
         {
             Signature = new Byte[16];
         }

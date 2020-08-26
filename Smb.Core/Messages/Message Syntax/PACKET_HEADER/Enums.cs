@@ -2,6 +2,31 @@
 
 namespace Smb.Core
 {
+    /// <summary>
+    /// Command (2 bytes): The command code of this packet. This field MUST contain one of the following valid commands:
+    /// </summary>
+    public enum PacketHeaderCommands : UInt16
+    {
+        NEGOTIATE = 0x0000,
+        SESSION_SETUP = 0x0001,
+        LOGOFF = 0x0002,
+        TREE_CONNECT = 0x0003,
+        TREE_DISCONNECT = 0x0004,
+        CREATE = 0x0005,
+        CLOSE = 0x0006,
+        FLUSH = 0x0007,
+        READ = 0x0008,
+        WRITE = 0x0009,
+        LOCK = 0x000A,
+        IOCTL = 0x000B,
+        CANCEL = 0x000C,
+        ECHO = 0x000D,
+        QUERY_DIRECTORY = 0x000E,
+        CHANGE_NOTIFY = 0x000F,
+        QUERY_INFO = 0x0010,
+        SETINFO = 0x0011,
+        OPLOCK_BREAK = 0x0012,
+    }
 
     /// <summary>
     /// Flags (4 bytes): A flags field, which indicates how to process the operation. This field MUST be constructed using the following values:
@@ -20,7 +45,7 @@ namespace Smb.Core
         /// <summary>
         /// When set in an SMB2 request, indicates that this request is a related operation in a compounded request chain. The use of this flag in an SMB2 request is as specified in section 3.2.4.1.4.
         /// When set in an SMB2 compound response, indicates that the request corresponding to this response was part of a related operation in a compounded request chain. The use of this flag in an SMB2 response is as specified in section 3.3.5.2.7.2.
-       /// </summary>
+        /// </summary>
         FLAGS_RELATED_OPERATIONS = 0x0000004,
         /// <summary>
         /// When set, indicates that this packet has been signed. The use of this flag is as specified in section 3.1.5.1.
