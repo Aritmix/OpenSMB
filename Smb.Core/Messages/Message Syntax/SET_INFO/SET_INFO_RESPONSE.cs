@@ -7,15 +7,10 @@ namespace Smb.Core
     /// <summary>
     /// </summary>
     [StructLayout(layoutKind: LayoutKind.Sequential)]
-    internal class QUERY_INFO_RESPONSE
+    internal class SET_INFO_RESPONSE
     {
         /// <summary>
         /// </summary>
-        public UInt16 StructureSize => 9;
-        /// <summary>
-        /// </summary>
-        public UInt16 OutputBufferOffset;
-        public UInt32 OutputBufferLength;
-        public Byte[] Buffer;
+        public UInt16 StructureSize => 2;
     }
 }
