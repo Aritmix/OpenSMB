@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Description>[MS-SMB2]: 
 Server Message Block (SMB) Protocol Versions 2 and 3
 https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962</Description>
@@ -22,6 +22,12 @@ https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5e
     <EmbeddedResource Remove="Models\Package\**" />
     <None Remove="Models\Header\**" />
     <None Remove="Models\Package\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Authentication\GSSAPI\" />
+    <Folder Include="Authentication\Kerberos\" />
+    <Folder Include="Authentication\NTLM\" />
   </ItemGroup>
 
 </Project>
