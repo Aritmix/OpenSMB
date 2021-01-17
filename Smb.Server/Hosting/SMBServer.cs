@@ -43,9 +43,7 @@ namespace Smb.Server.Hosting
 
                     // Start an asynchronous socket to listen for connections.  
                     Console.WriteLine("Waiting for a connection...");
-                    listener.BeginAccept(
-                        new AsyncCallback(AcceptCallback),
-                        listener);
+                    listener.BeginAccept(new AsyncCallback(AcceptCallback), listener);
 
                     // Wait until a connection is made before continuing.  
                     allDone.WaitOne();
@@ -119,7 +117,7 @@ namespace Smb.Server.Hosting
 
         private void Send(Socket handler, String data)
         {
-            // Convert the string data to byte data using ASCII encoding.  
+            // Convert the String data to byte data using ASCII encoding.  
             byte[] byteData = Encoding.ASCII.GetBytes(data);
 
             // Begin sending the data to the remote device.  

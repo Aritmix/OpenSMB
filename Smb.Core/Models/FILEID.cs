@@ -1,8 +1,6 @@
-﻿using Smb.Core.SID_IDENTIFIERS;
-using System;
-using System.Dynamic;
+﻿using System;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
     /// <summary>
     /// The SMB2 FILEID is used to represent an open to a file.

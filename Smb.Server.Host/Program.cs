@@ -35,6 +35,7 @@ namespace Smb.Server.Host
             {
                 setupAction.ServerIP = ipAddress;
                 setupAction.Port = 11000;
+                setupAction.TransportType = Core.Shared.SMBTransportTypes.DirectTCP;
             });
 
             

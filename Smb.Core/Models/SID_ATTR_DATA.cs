@@ -1,7 +1,7 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using Smb.Core.Messages;
+using System;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
     /// <summary>
     /// </summary>

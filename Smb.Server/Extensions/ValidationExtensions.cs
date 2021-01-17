@@ -11,13 +11,13 @@ namespace Smb.Server.Extensions
     internal static class ValidationExtensions
     {
         [DebuggerStepThrough]
-        public static bool IsEmpty(this string value)
+        public static bool IsEmpty(this String value)
         {
             return string.IsNullOrWhiteSpace(value);
         }
 
         [DebuggerStepThrough]
-        public static bool HasValue(this string value)
+        public static bool HasValue(this String value)
         {
             return !string.IsNullOrWhiteSpace(value);
         }

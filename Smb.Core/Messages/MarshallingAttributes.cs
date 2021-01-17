@@ -54,7 +54,7 @@ namespace Smb.Core.Messages
         {
             // The following suppression is adopted because this field will be used by reflection.
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            internal string expr;
+            internal String expr;
 
             /// <summary>
             /// Constructs a size attribute by using the given size expression.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
 
     /// <summary>

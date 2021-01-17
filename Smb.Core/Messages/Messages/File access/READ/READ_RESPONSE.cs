@@ -1,0 +1,27 @@
+﻿using System;
+using System.Dynamic;
+using System.Runtime.InteropServices;
+
+namespace Smb.Core.Messages
+{
+    /// <summary>
+    /// The SMB2 LOGOFF Response packet is sent by the server to confirm that an SMB2 LOGOFF Request (section 2.2.7) was completed successfully. This response is composed of an SMB2 header, as specified in section 2.2.1, followed by this request structure:
+    /// </summary>
+    [StructLayout(layoutKind: LayoutKind.Sequential)]
+    internal class READ_RESPONSE
+    {
+        /// <summary>
+        /// </summary>
+        public UInt16 StructureSize => 17;
+        /// <summary>
+        /// </summary>
+        public Byte DataOffset;
+        public Byte Reserved => 0;
+        public UInt32 DataLength;
+        public UInt32 DataRemaining;
+        public UInt32 Reserved2 => 0;
+
+        public Byte[] Buffer;
+
+    }
+}

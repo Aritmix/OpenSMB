@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
 using static Smb.Core.Messages.MarshallingAttributes;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
     /// <summary>
     /// The CLAIM_SECURITY_ATTRIBUTE_RELATIVE_V1 structure defines a resource attribute 
@@ -15,8 +11,8 @@ namespace Smb.Core
     {
         /// <summary>
         /// A DWORD value indicating an offset from the beginning of the CLAIM_SECURITY_ATTRIBUTE_RELATIVE_V1 
-        /// structure to a string of Unicode characters containing the name of the claim security attribute. 
-        /// The string MUST be at least 4 bytes in length.
+        /// structure to a String of Unicode characters containing the name of the claim security attribute. 
+        /// The String MUST be at least 4 bytes in length.
         /// </summary>
         public UInt32 Name;
 
@@ -69,7 +65,7 @@ namespace Smb.Core
 
             /// <summary>
             /// The value of the claim security attribute is case sensitive. 
-            /// This flag is valid for values that contain string types.
+            /// This flag is valid for values that contain String types.
             /// </summary>
             CLAIM_SECURITY_ATTRIBUTE_VALUE_CASE_SENSITIVE = 0x00000002,
 
@@ -107,7 +103,7 @@ namespace Smb.Core
             CLAIM_SECURITY_ATTRIBUTE_TYPE_UINT64 = 0x0002,
 
             /// <summary>
-            /// Values member refers to an array of offsets to Unicode character string value(s).
+            /// Values member refers to an array of offsets to Unicode character String value(s).
             /// </summary>
             CLAIM_SECURITY_ATTRIBUTE_TYPE_STRING = 0x0003,
 

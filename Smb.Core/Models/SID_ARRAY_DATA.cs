@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
     /// <summary>
     /// </summary>

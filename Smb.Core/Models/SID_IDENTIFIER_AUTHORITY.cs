@@ -2,7 +2,7 @@
 using System.Dynamic;
 using static Smb.Core.Messages.MarshallingAttributes;
 
-namespace Smb.Core.SID_IDENTIFIERS
+namespace Smb.Core.Models
 {
     /// <summary>
     /// This is a packet representation of the SID type (as specified in section 2.4.2) for use by block protocols. Multiple-byte fields are transmitted on the wire with an endianness specified by the protocol in question.

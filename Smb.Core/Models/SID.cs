@@ -1,8 +1,6 @@
-﻿using Smb.Core.SID_IDENTIFIERS;
-using System;
-using System.Dynamic;
+﻿using System;
 
-namespace Smb.Core
+namespace Smb.Core.Models
 {
     /// <summary>
     /// This is a packet representation of the SID type (as specified in section 2.4.2) for use by block protocols. Multiple-byte fields are transmitted on the wire with an endianness specified by the protocol in question.
